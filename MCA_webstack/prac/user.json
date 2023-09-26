@@ -1,0 +1,31 @@
+{
+    "users":[
+        {
+    "name":"Naveen",
+    "age":22,
+    "skills":["html","css","java"],
+    "address":{
+        "city":"banglore",
+        "state":"Karnataka"
+    }
+    },
+    {
+        "name":"Silis",
+        "age":21,
+        "skills":["html","css","react"],
+        "address":{
+            "city":"banglore",
+            "state":"Karnataka"
+        }
+    },
+    {
+        "name":"Fredin",
+        "age":20,
+        "skills":["html","Python","java"],
+        "address":{
+            "city":"banglore",
+            "state":"Karnataka"
+        }
+    }
+    ]
+}

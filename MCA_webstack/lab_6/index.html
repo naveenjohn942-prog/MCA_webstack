@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <form action="/register" method="post" id="form">
+    <div>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" />
+      <span class="valid"></span>
+      <span class="error"></span>
+    </div>
+    <div>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" />
+      <span class="valid"></span>
+      <span class="error"></span>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" />
+      <span class="valid"></span>
+      <span class="error"></span>
+    </div>
+    <div>
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" />
+      <span class="valid"></span>
+      <span class="error"></span>
+    </div>
+    <div>
+      <label for="date_of_birth">Date of Birth</label>
+      <input type="date" id="date_of_birth" name="date_of_birth" />
+      <span class="valid"></span>
+      <span class="error"></span>
+    </div>
+    <button type="submit" id="submit-button">Register</button>
+  </form>
+</body>
+</html>

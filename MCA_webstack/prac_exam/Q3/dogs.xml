@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dogs>
+    
+    <dog>
+      <breed id="1">Golden Retriever</breed>
+      <color>Golden</color>
+      <country>United States</country>
+    </dog>
+    <dog>
+      <breed id="1">German Shepherd</breed>
+      <color>Black and Tan</color>
+      <country>Germany</country>
+    </dog>
+    <dog>
+      <breed id="1">Poodle</breed>
+      <color>White</color>
+      <country>France</country>
+    
+    </dog>
+    <dog>
+        <breed id="1">Bulldog</breed>
+        <color>Brindle</color>
+        <country>United Kingdom</country>
+      
+      </dog>
+      <dog>
+        <breed id="1">Labrador Retriever</breed>
+        <color>Yellow</color>
+        <country>Canada</country>
+      
+      </dog>
+      <dog>
+        <breed id="1">Boxer</breed>
+        <color>Fawn</color>
+        <country>Germany</country>
+      
+      </dog>
+      <dog>
+        <breed id="1">Beagle</breed>
+        <color>Tri-color</color>
+        <country>United Kingdom</country>
+      
+      </dog>
+      <dog>
+        <breed id="1">Dachshund</breed>
+        <color>Red</color>
+        <country>Germany</country>
+      
+      </dog>
+      <dog>
+        <breed id="1">Doberman Pinscher</breed>
+        <color>Black and Tan</color>
+        <country>Germany</country>
+      
+      </dog>
+      <dog>
+        <breed id="1">Rottweiler</breed>
+        <color>Black and Tan</color>
+        <country>Germany</country>
+      
+      </dog>
+      
+</dogs>

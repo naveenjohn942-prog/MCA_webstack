@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee department="ENG">
+      <name id="1">Naveen</name>
+      <l_name>John</l_name>
+      <dob>27-09-2000</dob>
+      <gender>Male</gender>
+      <position>Software Developer</position>
+      <salary>6000</salary>
+    </employee>
+    <employee category="ENG">
+      <name id="1">Jay</name>
+      <l_name>Prakash</l_name>
+      <dob>22-08-2001</dob>
+      <gender>Male</gender>
+      <position>Testers</position>
+      <salary>7000</salary>
+    </employee>
+    <employee category="HR">
+      <name id="1">Rekha</name>
+      <l_name>Sharma</l_name>
+      <dob>05-07-2002</dob>
+      <gender>Female</gender>
+      <position>HR</position>
+      <salary>7000</salary>
+    </employee>
+    <employee category="HK">
+      <name id="1">Rohit</name>
+      <l_name>Sharma</l_name>
+      <dob>15-10-2000</dob>
+      <gender>Male</gender>
+      <position>House Keeping</position>
+      <salary>3000</salary>
+    </employee>
+</employees>

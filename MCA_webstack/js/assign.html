@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        
+        // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        const weekly = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const today = new Date();
+
+        let day = 'Today is:' + weekly[today.getDay()];
+        var time = 'Current time is : ' + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        // var dateTime = date+' '+time;
+        console.log(day)
+        console.log(time)
+        function check() {
+    var x = Math.floor((Math.random() * 10) + 1);
+    var i = document.getElementById('inputFiled').value;
+    var feedback = document.getElementById('feedback');
+ 
+    if (i == x) {
+        feedback.innerHTML = 'Good Work';
+    } else {
+        feedback.innerHTML = 'Not matched';
+    }
+   
+        }
+
+        function calc() {
+          var a = document.getElementById('numA').value;
+          var b = document.getElementById('numB').value;
+
+          var ans = a*b;
+          ans.innerHTML = ans;
+        }
+
+        function multiply() {
+          var firstNumber = document.getElementById("firstNumber").value;
+          var secondNumber = document.getElementById("secondNumber").value;
+          var product = firstNumber * secondNumber;
+          document.getElementById("result").innerHTML = product;
+        }
+
+        function divide() {
+          var firstNumber = document.getElementById("firstNumber").value;
+          var secondNumber = document.getElementById("secondNumber").value;
+          var quotient = firstNumber / secondNumber;
+          document.getElementById("result").innerHTML = quotient;
+        }
+
+        function getExtension(filename) {
+          // Split the filename into an array of strings, separated by the '.' character.
+          var parts = filename.split('.');
+
+          // The last element of the array is the extension.
+          return parts[parts.length - 1];
+        }
+
+        var filename = 'code.js';
+        var extension = getExtension(filename);
+
+        console.log(extension); // js
+
+        var currentUrl = window.location.pathname;
+        var extension = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+
+        console.log(extension);
+        
+    </script>
+  </head>
+  <body>
+    <form>
+        <!-- 
+          <input type="text" class="form-control" id="inputFiled" aria-describedby="emailHelp">
+        </div> -->
+        <label for="inputFiled" class="form-label">Guess the number</label>
+
+        <div class="mb-3"></div>
+        <input id="inputFiled" type=text />
+        <input type="button" class="form-control md-3" onclick="check()" value="check" />
+        <!-- <p id="random"></p> -->
+        <!-- <div id="feedback"></div> -->
+
+        
+      </form>
+
+      <form>
+        <label for="firstNumber">First Number:</label>
+        <input type="text" id="firstNumber" />
+        <br />
+        <label for="secondNumber">Second Number:</label>
+        <input type="text" id="secondNumber" />
+        <br />
+        <input type="button" value="Multiply" onclick="multiply()" />
+        <input type="button" value="Divide" onclick="divide()" />
+        <br />
+        <span id="result"></span>
+        </form>
+        
+        <h1>Get the Website URL</h1>
+        <p>The current URL of this page is:</p>
+        <p id="currentUrl"></p>
+
+        <script>
+          function getURL() {
+          var currentUrl = window.location.href;
+          return currentUrl;
+        }
+
+        var currentUrl = getURL();
+        document.getElementById("currentUrl").innerHTML = currentUrl;
+        </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+[
+    {
+    "Breed": "Golden Retriever",
+    "Color": "Golden",
+    "Country": "United States"
+    },
+    {
+    "Breed": "German Shepherd",
+    "Color": "Black and Tan",
+    "Country": "Germany"
+    },
+    {
+    "Breed": "Poodle",
+    "Color": "White",
+    "Country": "France"
+    },
+    {
+    "Breed": "Bulldog",
+    "Color": "Brindle",
+    "Country": "United Kingdom"
+    },
+    {
+    "Breed": "Labrador Retriever",
+    "Color": "Yellow",
+    "Country": "Canada"
+    },
+    {
+    "Breed": "Boxer",
+    "Color": "Fawn",
+    "Country": "Germany"
+    },
+    {
+    "Breed": "Beagle",
+    "Color": "Tri-color",
+    "Country": "United Kingdom"
+    },
+    {
+    "Breed": "Dachshund",
+    "Color": "Red",
+    "Country": "Germany"
+    },
+    {
+    "Breed": "Doberman Pinscher",
+    "Color": "Black and Tan",
+    "Country": "Germany"
+    },
+    {
+    "Breed": "Rottweiler",
+    "Color": "Black and Tan",
+    "Country": "Germany"
+    },
+    {
+    "Breed": "Siberian Husky",
+    "Color": "Black and White",
+    "Country": "Russia"
+    }
+
+]
