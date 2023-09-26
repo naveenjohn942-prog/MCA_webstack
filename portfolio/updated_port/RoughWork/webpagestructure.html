@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+
+    html{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        cursor: pointer;
+    }
+    .biggest {
+      display: block;
+      /* background-color: RED; */
+    
+    }
+
+    article {
+      border: 2px solid black;
+      width: 200px;
+      padding: 10px;
+      text-overflow: clip;
+    }
+    article:hover{
+        background-color: black;
+        color: white;
+    }
+    .box3 {
+      /* height: 300px; */
+      width: 300px;
+      border: 2px solid black;
+      display: inline;
+      /* background-color: yellow; */
+      margin-left: 10px;
+      flex: 1;
+      text-align: center;
+
+    }
+
+    .box3:hover{
+        background-color: black;
+        color: white;
+    }
+
+    footer:hover{
+        background-color: black;
+        color: white;
+    }
+    .box2 {
+      /* background-color: green ; */
+      /* padding: 5px; */
+      margin: 5px 0px;
+      display: flex;
+      flex-direction: row;
+      display: flex;
+      /* align-items: center; */
+      /* justify-content: center; */
+    }
+
+    header {
+      border: 2px solid black;
+      text-align: center;
+    }
+
+    header:hover{
+        background-color: black ;
+        color: white;
+    }
+    footer {
+      border: 2px solid black;
+      text-align: center;
+    }
+    nav {
+      padding: 20px;
+      border: 2px solid black;
+      margin-top: 10px;
+      display: flex;
+
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    nav a {
+      padding: 10px 5px;
+      border: 2px solid black;
+      margin: 10px 5px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="biggest">
+      <header>
+        <h1>Header</h1>
+        <div class="small1"></div>
+      </header>
+      <nav>
+        <div>
+          <a href="#"> Home</a>
+          <a href="#"> About </a>
+          <a href="#"> Contact</a>
+          <a href="#"> Product</a>
+        </div>
+      </nav>
+      <div class="box2">
+        <article>
+          <img src="firewatch.jpg" height="100px" width="200px" alt="" />
+          <h3>Scenary</h3>
+          <details>
+            <summary>Heading1</summary>
+            <p>795fuygfiytfoutvytfouyghu</p>
+          </details>
+          <details>
+            <summary>Heading1</summary>
+            <p>injomnuhygutfd6f7g8huih</p>
+          </details>
+          <details>
+            <summary>Heading1</summary>
+            <p>hygutfd6f7g8huinbfrdyfgyh</p>
+          </details>
+        </article>
+
+        <div class="box3">
+            <h1>Content</h1>
+        </div>
+      </div>
+      <footer><h1>Footer</h1></footer>
+    </div>
+  </body>
+</html>

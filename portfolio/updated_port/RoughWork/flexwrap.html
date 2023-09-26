@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            FlexBox/FlexWrap
+        </title>
+    </head>
+    <style>
+        html{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .outerbox{
+            background-color: rgb(19, 14, 14);
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            flex-wrap: wrap;
+            border-radius: 10px;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(251, 86, 86);
+            margin: 5px;
+            font-size: 30px;
+            font-weight: bold;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            
+
+        }
+        .i3 ,.i6,.i9,.i11{flex-grow: 3;}
+        .item:hover{
+            background-color:  yellow;
+            transition: ease-in-out 0.5s;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1>Flexbox</h1>
+        <div class="outerbox">
+            <div class="item i1">A</div>
+            <div class="item i2">B</div>
+            <div class="item i3">C</div>
+            <div class="item i4">D</div>
+            <div class="item i5">E</div>
+            <div class="item i6">F</div>
+            <div class="item i7">G</div>
+            <div class="item i8">H</div>
+            <div class="item i9">I</div>
+            <div class="item i10">J</div>
+            <div class="item i11">K</div>
+            <div class="item i12">L</div>
+
+        </div>
+
+
+    </body>
+</html>

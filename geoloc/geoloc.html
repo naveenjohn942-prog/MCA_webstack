@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <h1 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0a0b0c;">My Current Location</h1>
+
+	<script type='text/javascript'>
+        
+      
+        function GetMap() {
+    var mapOptions = {
+        credentials: 'AlLpCRHHhzMRaS5z4x37WkOQ7rVJdHwx92-G8FmfYjim4nExkfWxJbOPKpotoN9W'
+    };
+
+    var map = new Microsoft.Maps.Map(document.getElementById('mapCanvas'), mapOptions);
+
+    var button = document.createElement('button');
+    button.innerHTML = 'Show Current Location';
+    button.id = 'showCurrentLocationButton';
+    button.onclick = function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var loc = new Microsoft.Maps.Location(
+                position.coords.latitude,
+                position.coords.longitude);
+            var pin = new Microsoft.Maps.Pushpin(loc);
+            map.entities.push(pin);
+
+            map.setView({ center: loc, zoom: 15 });
+        });
+    };
+    document.body.appendChild(button);
+}
+
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    <style>
+
+        #mapCanvas
+        {
+
+            margin-left: 600px;
+
+            position: relative;
+            width:600px;
+            height:400px;
+            border: 2px solid #6e6e6e;
+            border-radius: 5vh;
+            box-shadow: 1vh 2vh 1em 1vh #dcdbdb;
+            margin-top: 1vh;
+            margin-bottom: 10vh;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+
+<body style="background: url(img1.jpg);background-size: cover;">
+
+    
+    <div id = "mapCanvas">
+
+    </div>
+</body>
+</html>

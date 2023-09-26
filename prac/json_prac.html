@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const user = {
+        //     name:"Naveen",
+        //     age:22,
+        //     skills:["html","css","java"],
+        //     address:{
+        //         city:"banglore",
+        //         state:"Karnataka"
+        //     }
+        // }
+        // console.log(user.skills[0])
+        // console.log(user)
+        // console.log(user.address.state)
+        
+    fetch('user.json')
+    .then(response=>response.json())
+    .then(json=>{
+        // console.log(json["name"]);
+        console.log(json.users[1]["name"]);
+
+    })
+
+
+
+
+    </script>
+</body>
+</html>

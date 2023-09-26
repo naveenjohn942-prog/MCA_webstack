@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Map Visualization</title>
+<style>
+canvas {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<h1>Map Visualization</h1>
+<p>Click the button below to get your location and draw a map.</p>
+<button id="getLocation">Get My Location</button>
+<canvas id="mapCanvas" width="500" height="300"></canvas>
+<script src="https://js.bingmaps.com/api/js/BingMapsAPI.js"></script>
+<script>
+var canvas = document.getElementById("mapCanvas");
+var ctx = canvas.getContext("2d");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(locateSuccess, locateFail);
+  } else {
+    alert("Geolocation is not supported by your browser.");
+  }
+}
+
+function locateSuccess(position) {
+  var map = new Microsoft.Maps.Map(canvas, {
+    credentials: "AlLpCRHHhzMRaS5z4x37WkOQ7rVJdHwx92-G8FmfYjim4nExkfWxJbOPKpotoN9W",
+    center: {
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude
+    },
+    zoom: 15
+  });
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  var dot = new Microsoft.Maps.CircleMarker(
+    {
+      center: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      },
+      radius: 10,
+      fill: {
+        color: "blue"
+      }
+    }
+  );
+
+  var label = new Microsoft.Maps.Text(
+    {
+      text: "Your Location",
+      position: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      },
+      font: {
+        size: 16
+      }
+    }
+  );
+
+  map.entities.add(dot);
+  map.entities.add(label);
+
+  var explorationArea = new Microsoft.Maps.Circle(
+    {
+      center: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      },
+      radius: 5000
+    }
+  );
+
+  map.layers.add(explorationArea);
+}
+
+function locateFail() {
+  alert("Failed to get your location.");
+}
+
+window.onload = loadMap;
+
+function loadMap() {
+  var map = new Microsoft.Maps.Map(canvas, {
+    credentials: "AlLpCRHHhzMRaS5z4x37WkOQ7rVJdHwx92-G8FmfYjim4nExkfWxJbOPKpotoN9W"
+  });
+}
+</script>
+</body>
+</html>

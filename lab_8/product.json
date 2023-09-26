@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "T-shirt",
+      "description": "A basic T-shirt in a variety of colors.",
+      "price": 10.99,
+      "image": "https://source.unsplash.com/random/500x500/?tshirt"
+    },
+    {
+      "id": 2,
+      "name": "Jeans",
+      "description": "A pair of denim jeans.",
+      "price": 29.99,
+      "image": "https://source.unsplash.com/random/500x500/?jeans"
+    },
+    {
+      "id": 3,
+      "name": "Sneakers",
+      "description": "A pair of sneakers.",
+      "price": 49.99,
+      "image": "https://source.unsplash.com/random/500x500/?sneakers"
+    },
+    {
+        "id": 4,
+        "name": "Shirt",
+        "description": "A basic T-shirt in a variety of colors.",
+        "price": 20.99,
+        "image": "https://source.unsplash.com/random/500x500/?shirt"
+      },
+      {
+        "id": 5,
+        "name": "Regular-Jeans",
+        "description": "A pair of denim jeans.",
+        "price": 39.99,
+        "image": "https://source.unsplash.com/random/500x500/?regular-jeans"
+      },
+      {
+        "id": 6,
+        "name": "Jordan Shoes",
+        "description": "A pair of sneakers.",
+        "price": 59.99,
+        "image": "https://source.unsplash.com/random/500x500/?jordan-shoes"
+      },
+      {
+        "id": 7,
+        "name": "Formals",
+        "description": "A basic T-shirt in a variety of colors.",
+        "price": 70.99,
+        "image": "https://source.unsplash.com/random/500x500/?formals"
+      },
+      {
+        "id": 8,
+        "name": "Baggy Fit Jeans",
+        "description": "A pair of denim jeans.",
+        "price": 12.99,
+        "image": "https://source.unsplash.com/random/500x500/?baggy-fit-jeans"
+      },
+      {
+        "id": 9,
+        "name": "Addidas-Shoes",
+        "description": "A pair of sneakers.",
+        "price": 17.99,
+        "image": "https://source.unsplash.com/random/500x500/?addidas-shoes"
+      },
+      {
+        "id": 10,
+        "name": "Shoes",
+        "description": "A pair of sneakers.",
+        "price": 19.99,
+        "image": "https://source.unsplash.com/random/500x500/?shoes"
+      }
+  ]
+  

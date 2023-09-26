@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sridevi - Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1>Sridevi</h1>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="frames-container">
+    <div class="frame" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm Sridevi, an Associate Professor in Computer Science, Christ Deemed to be University. I am passionate about teaching and research in the field of computer science and enjoy exploring new technologies.
+        </p>
+      </div>
+    </div>
+
+    <div class="frame" id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <h3>Ph.D. in Computer Science</h3>
+            <p>Bharathiar University, Coimbatore, Tamil Nadu</p>
+          </li>
+          <li>
+            <h3>Master of Computer Applications</h3>
+            <p>PSG College of Arts & Science, Coimbatore, Tamil Nadu, India</p>
+          </li>
+          <li>
+            <h3>Bachelor of Science in Chemistry</h3>
+            <p>Bharathiar University</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="frame" id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <h3>Associate Professor and Head, Department of Computer Science with Data Analytics</h3>
+            <p>PSG College of Arts & Science, Coimbatore,India</p>
+          </li>
+          <li>
+            <h3>Assistant Professor, Department of Computer Science</h3>
+            <p>M.Kumarasamy College of Engineering, Karur, Tamil Nadu, India</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="frame" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <a href="https://www.example-project1.com" target="_blank">Project 1</a>
+            <p>A research project on artificial intelligence and machine learning.</p>
+          </li>
+          <li>
+            <a href="https://www.example-project2.com" target="_blank">Project 2</a>
+            <p>A web application developed for computer science students.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="frame" id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form onsubmit="return false;">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button onclick="sendMessage()">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

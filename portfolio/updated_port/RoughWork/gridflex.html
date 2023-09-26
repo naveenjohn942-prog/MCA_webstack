@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: fit-content;
+    padding: 10px;
+        /* background-color: black; */
+      }
+      .container2{
+        width: fit-content;
+        padding: 20px;
+        margin-top: 10px;
+        display: grid ;
+        grid-template-rows: repeat(3,150px);
+        grid-template-columns: repeat(3,150px);
+        flex-direction: row;
+        /* background-color:  black; */
+        box-shadow: burlywood;
+        margin: auto;
+        margin-top: 10vh;
+      }
+      
+
+      .b1color {
+        background-color: rgb(18, 18, 18);
+      }
+      .b3color {
+        background-color: rgb(28, 28, 28);
+      }
+      .b2color {
+        background-color: rgb(31, 31, 31);
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 5px 5px 10px gray;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .box:hover{
+        background-color: rgb(240, 44, 44);
+        color: black;
+        scale:1.1;
+        transition: ease-in-out 1s;
+      }
+
+     a:hover{
+      color:yellow
+     }
+    
+    </style>
+  </head>
+  <body>
+    <div class="container2">
+        <div class="box b1color">B1</div>
+        <div class="box b2color">B2</div>
+        <div class="box b3color">B3</div>
+        <div class="box b1color">B4</div>
+        <div class="box b2color">B5</div>
+        <div class="box b3color">B6</div>
+        <div class="box b1color">B7</div>
+        <div class="box b2color">B8</div>
+        <div class="box b3color">B9</div>
+        <!-- <a href="#">link</a> -->
+      </div>
+  </body>
+</html>

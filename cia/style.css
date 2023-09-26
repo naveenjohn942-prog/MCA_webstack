@@ -1,0 +1,27 @@
+.container-fluid{
+    height: 70px;
+}
+
+.card{
+    width: 24rem;
+    display: flex;
+    flex-direction: column; 
+    padding: 8px 8px;
+    /* background-color: rgb(221, 225, 226); */
+    
+    margin: 10px;
+}
+.card-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.trying{
+    display: flex;
+    flex-direction: column; 
+    padding: 50px;
+}
+.imaging{
+    background-image: url(bg.jpg);
+    
+}
