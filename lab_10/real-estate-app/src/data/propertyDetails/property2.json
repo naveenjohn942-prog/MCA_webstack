@@ -1,0 +1,16 @@
+{
+    "id": 2,
+    "name": "Luxury Condo with City View",
+    "location": "5678 Oak Avenue, City B",
+    "price": 650000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "squareFeet": 1800,
+    "description": "Experience luxury living in this modern condo with stunning city views. This 2-bedroom, 2-bathroom unit offers top-notch amenities, including a rooftop pool and fitness center.",
+    "images": [
+      "https://source.unsplash.com/random/500x500/?reale-estate-property2",
+      "https://source.unsplash.com/random/500x500/?reale-estate-property1",
+      "https://source.unsplash.com/random/500x500/?reale-estate-property"
+    ]
+  }
+  

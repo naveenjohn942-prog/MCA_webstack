@@ -1,0 +1,17 @@
+/* PropertyList.module.css */
+.property-list-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .property-list-item {
+    margin-bottom: 10px;
+  }
+  
+  .property-list-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
