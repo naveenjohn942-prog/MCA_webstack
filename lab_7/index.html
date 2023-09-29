@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fetch JSON Data with AJAX</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-function fetchBooks() {
-  $.ajax({
-    url: "books.json",
-    dataType: "json",
-    success: function(data) {
-      displayBooks(data);
+  <title>Fetch JSON Data with AJAX</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    function fetchBooks() {
+      $.ajax({
+        url: "https://raw.githubusercontent.com/naveenjohn942-prog/MCA_webstack/main/lab_7/books.json",
+        dataType: "json",
+        success: function(data) {
+          displayBooks(data);
+        }
+      });
     }
-  });
-}
 
-function displayBooks(data) {
-  var bookList = document.getElementById("bookList");
-  bookList.innerHTML = "";
+    function displayBooks(data) {
+      var bookList = document.getElementById("bookList");
+      bookList.innerHTML = "";
 
-  for (var i in data) {
-    var book = data[i];
-    var bookDiv = document.createElement("div");
-    bookDiv.innerHTML = `
-      <h3>${book.title}</h3>
-      <p>${book.author}</p>
-      <p>${book.genre}</p>
-    `;
-    bookList.appendChild(bookDiv);
-  }
-}
+      for (var i in data) {
+        var book = data[i];
+        var bookDiv = document.createElement("div");
+        bookDiv.innerHTML = `
+          <h3>${book.title}</h3>
+          <p>${book.author}</p>
+          <p>${book.genre}</p>
+        `;
+        bookList.appendChild(bookDiv);
+      }
+    }
 
-$(document).ready(function() {
-  $("#fetchBooks").click(fetchBooks);
-});
-</script>
+    $(document).ready(function() {
+      $("#fetchBooks").click(fetchBooks);
+    });
+  </script>
 </head>
 <body>
   <h1>Fetch JSON Data with AJAX</h1>

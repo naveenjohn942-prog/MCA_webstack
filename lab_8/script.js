@@ -1,92 +1,75 @@
-let products = []; // Define an empty array to store the products
+let products = []; 
+const productsUrl = "https://raw.githubusercontent.com/naveenjohn942-prog/MCA_webstack/main/lab_8/product.json";
 
-   
-    const productsUrl = "product.json";
+const xhr = new XMLHttpRequest();
 
-    const xhr = new XMLHttpRequest();
+xhr.open("GET", productsUrl);
 
-  
-    xhr.open("GET", productsUrl);
+xhr.setRequestHeader("Accept", "application/json");
 
-    xhr.setRequestHeader("Accept", "application/json");
+xhr.send();
 
- 
-    xhr.send();
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    products = JSON.parse(xhr.responseText);
+    parseProducts(products);
 
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", function () {
+      const filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(this.value.toLowerCase())
+      );
 
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-  
-        products = JSON.parse(xhr.responseText); // Store the parsed products
-        parseProducts(products); // Parse and display the products
+      parseProducts(filteredProducts);
+    });
+  } else {
+    console.log(xhr.statusText);
+  }
+};
 
-      
-        const searchInput = document.getElementById("searchInput");
-        searchInput.addEventListener("input", function() {
+function parseProducts(products) {
+  const productList = document.getElementById("productList");
 
-          const filteredProducts = products.filter(product => product.name.toLowerCase().includes(this.value.toLowerCase()));
+  productList.innerHTML = "";
 
-          parseProducts(filteredProducts);
-        });
-      } else {
-  
-        console.log(xhr.statusText);
-      }
-    };
+  products.forEach((product) => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
 
+    const productImage = document.createElement("img");
+    productImage.src = product.image;
+    productDiv.appendChild(productImage);
 
-    function parseProducts(products) {
-    
-      const productList = document.getElementById("productList");
+    const productName = document.createElement("p");
+    productName.classList.add("product-name");
+    productName.textContent = product.name;
+    productDiv.appendChild(productName);
 
+    const productDescription = document.createElement("p");
+    productDescription.classList.add("product-description");
+    productDescription.textContent = product.description;
+    productDiv.appendChild(productDescription);
 
-      productList.innerHTML = "";
+    const productPrice = document.createElement("p");
+    productPrice.classList.add("product-price");
+    productPrice.textContent = `$${product.price}`;
+    productDiv.appendChild(productPrice);
 
-      
-      products.forEach(product => {
-       
-        const productDiv = document.createElement("div");
-        productDiv.classList.add("product");
+    productList.appendChild(productDiv);
+  });
+}
 
- 
-        const productImage = document.createElement("img");
-        productImage.src = product.image;
-        productDiv.appendChild(productImage);
+const sortButtons = document.querySelectorAll(".sort-button");
+sortButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const sortedProducts = [...products];
 
-     
-        const productName = document.createElement("p");
-        productName.classList.add("product-name");
-        productName.textContent = product.name;
-        productDiv.appendChild(productName);
-
-        const productDescription = document.createElement("p");
-        productDescription.classList.add("product-description");
-        productDescription.textContent = product.description;
-        productDiv.appendChild(productDescription);
-
-     
-        const productPrice = document.createElement("p");
-        productPrice.classList.add("product-price");
-        productPrice.textContent = `$${product.price}`;
-        productDiv.appendChild(productPrice);
-
-   
-        productList.appendChild(productDiv);
-      });
+    if (this.dataset.sort === "price") {
+      sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (this.dataset.sort === "name") {
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    const sortButtons = document.querySelectorAll(".sort-button");
-    sortButtons.forEach(button => {
-      button.addEventListener("click", function() {
-    
-        const sortedProducts = [...products];
-
-        if (this.dataset.sort === "price") {
-          sortedProducts.sort((a, b) => a.price - b.price);
-        } else if (this.dataset.sort === "name") {
-          sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
-        }
-
-        parseProducts(sortedProducts);
-      });
-    });
+    parseProducts(sortedProducts);
+  });
+});
