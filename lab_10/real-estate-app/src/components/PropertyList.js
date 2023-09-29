@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import propertiesData from '../data/properties.json'; // Import local data
+import propertiesData from '/data/properties.json'; // Import local data
 import styles from './PropertyList.module.css';
 
 function PropertyList() {

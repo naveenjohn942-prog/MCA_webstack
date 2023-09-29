@@ -4,22 +4,28 @@ import PropertySearch from './components/PropertySearch';
 import PropertyList from './components/PropertyList';
 import PropertyDetail from './components/PropertyDetail';
 import './App.css';
+import ReactDOM from 'react-dom';
 
 function App() {
   const [filteredProperties, setFilteredProperties] = useState([]);
   const [allProperties, setAllProperties] = useState([]);
 
   useEffect(() => {
-    // Simulate loading property data from a JSON file
-    fetch('./data/properties.json') // Adjust the path as needed
-      .then((response) => response.json())
-      .then((data) => {
-        setAllProperties(data);
-      })
-      .catch((error) => {
-        console.error('Error loading property data:', error);
-      });
-  }, []);
+ 
+  async function fetchProperties(){
+    const res = await fetch('/data/properties.json',{
+      headers:{
+        'content-Type':'application/json',
+      },
+
+    });
+    console.log(res);
+    const data = await res.json();
+    console.log(data);
+    setAllProperties(data);
+  }
+  fetchProperties();
+},[]);
 
   const handleSearch = (searchCriteria) => {
     const { location, priceRange, propertyType } = searchCriteria;
@@ -36,6 +42,7 @@ function App() {
     });
 
     setFilteredProperties(filtered);
+    // console.log("working");
   };
 
   return (
@@ -55,5 +62,9 @@ function App() {
     </Router>
   );
 }
-
 export default App;
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
+
+// Use root.render to render your App component
+root.render(<App />);

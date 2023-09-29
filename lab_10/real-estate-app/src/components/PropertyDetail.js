@@ -7,7 +7,7 @@ function PropertyDetail() {
 
   useEffect(() => {
     // Simulate API request by importing data from the property detail JSON file
-    import(`../data/propertyDetails/property${id}.json`)
+    import(`../../public/data/propertyDetails/property${id}.json`)
       .then((module) => setProperty(module.default))
       .catch((error) => {
         console.error('Error loading property details:', error);
