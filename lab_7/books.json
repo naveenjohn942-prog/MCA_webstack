@@ -18,6 +18,26 @@
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "genre": "Classic Literature"
+    },
+    {
+      "title": "comupter science",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy"
+    },
+    {
+      "title": "Autobiography of APJ",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy"
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Literary Fiction"
+    },
+    {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic Literature"
     }
 ]
   
