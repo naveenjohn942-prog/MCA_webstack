@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
  
   async function fetchProperties(){
-    const res = await fetch('/data/properties.json',{
+    const res = await fetch('/public/data/properties.json',{
       headers:{
         'content-Type':'application/json',
       },
@@ -27,23 +27,22 @@ function App() {
   fetchProperties();
 },[]);
 
-  const handleSearch = (searchCriteria) => {
-    const { location, priceRange, propertyType } = searchCriteria;
+const handleSearch = (searchCriteria) => {
+  const { location, price, propertyType } = searchCriteria;
 
-    const filtered = allProperties.filter((property) => {
-      const matchesLocation =
-        !location || property.location.toLowerCase().includes(location.toLowerCase());
-      const matchesPriceRange =
-        !priceRange || property.priceRange.toLowerCase().includes(priceRange.toLowerCase());
-      const matchesPropertyType =
-        !propertyType || property.propertyType.toLowerCase().includes(propertyType.toLowerCase());
+  const filtered = allProperties.filter((property) => {
+    const matchesLocation =
+      !location || property.location.toLowerCase().includes(location.toLowerCase());
+    const matchesPrice =
+      !price || property.price === price;
+    const matchesPropertyType =
+      !propertyType || property.propertyType.toLowerCase().includes(propertyType.toLowerCase());
 
-      return matchesLocation && matchesPriceRange && matchesPropertyType;
-    });
+    return matchesLocation && matchesPrice && matchesPropertyType;
+  });
 
-    setFilteredProperties(filtered);
-    // console.log("working");
-  };
+  setFilteredProperties(filtered);
+};
 
   return (
     <Router>
