@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import propertiesData from '/data/properties.json'; // Import local data
 import styles from './PropertyList.module.css';
 
 function PropertyList() {
   const [properties, setProperties] = useState([]);
 
+  const apiUrl = `${process.env.PUBLIC_URL}/data/properties.json`;
+
   useEffect(() => {
-    // Simulate API request by setting properties state with data from JSON file
-    setProperties(propertiesData);
-  }, []);
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        setProperties(data);
+      })
+      .catch((error) => {
+        console.error('Error loading property data:', error);
+      });
+  }, [apiUrl]);
 
   return (
     <div className={styles.propertyListContainer}>

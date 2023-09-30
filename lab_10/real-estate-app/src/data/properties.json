@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Spacious Family Home",
+      "location": "1234 Elm Street, City A",
+      "price": 275000
+    },
+    {
+      "id": 2,
+      "name": "Luxury Condo with City View",
+      "location": "5678 Oak Avenue, City B",
+      "price": 650000
+    },
+    {
+      "id": 3,
+      "name": "Cozy Townhouse",
+      "location": "987 Maple Lane, City C",
+      "price": 180000
+    }
+  ]
+  
