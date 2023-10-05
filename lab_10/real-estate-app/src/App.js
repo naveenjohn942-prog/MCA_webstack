@@ -6,46 +6,43 @@ import PropertyDetail from './components/PropertyDetail';
 import './App.css';
 import ReactDOM from 'react-dom';
 
-// Modify the Nav component with CSS styles
+const navStyle = {
+  backgroundColor: '#333',
+  padding: '10px 0',
+};
+
+const ulStyle = {
+  listStyleType: 'none',
+  margin: 0,
+  padding: 0,
+  display: 'flex',
+  justifyContent: 'center',
+};
+
+const liStyle = {
+  margin: '0 20px',
+};
+
+const linkStyle = {
+  color: '#fff',
+  textDecoration: 'none',
+  fontSize: '18px',
+};
+
 function Nav() {
   return (
     <nav style={navStyle}>
       <ul style={ulStyle}>
         <li style={liStyle}>
-          <Link to="/" style={linkStyle}>Home</Link>
+          <Link to="#" style={linkStyle}>Home</Link>
         </li>
         <li style={liStyle}>
-          <Link to="/about" style={linkStyle}>About</Link>
+          <Link to="#" style={linkStyle}>About</Link>
         </li>
       </ul>
     </nav>
   );
 }
-
-// Define CSS styles
-const navStyle = {
-  backgroundColor: '#333',      // Background color of the navigation bar
-  padding: '10px 0',            // Padding at the top and bottom
-};
-
-const ulStyle = {
-  listStyleType: 'none',        // Remove bullet points from the list
-  margin: 0,                    // Remove default margin
-  padding: 0,                   // Remove default padding
-  display: 'flex',              // Display list items in a row
-  justifyContent: 'center',     // Center align list items horizontally
-};
-
-const liStyle = {
-  margin: '0 20px',             // Add margin between list items
-};
-
-const linkStyle = {
-  color: '#fff',                // Text color of the links
-  textDecoration: 'none',      // Remove underline from links
-  fontSize: '18px',             // Font size of the links
-};
-
 
 function App() {
   const [filteredProperties, setFilteredProperties] = useState([]);
@@ -55,7 +52,7 @@ function App() {
     async function fetchProperties() {
       const res = await fetch('/public/data/properties.json', {
         headers: {
-          'content-Type': 'application/json',
+          'Content-Type': 'application/json',
         },
       });
       console.log(res);
@@ -96,12 +93,21 @@ function App() {
           }
         />
         <Route path="/property/:id" element={<PropertyDetail />} />
+        <Route path="/about" element={<About />} /> {/* Add a route for the About page */}
       </Routes>
     </Router>
   );
 }
-
 export default App;
+function About() {
+  return (
+    <div>
+      <h1>About Us</h1>
+      <p>This is the about page content.</p>
+    </div>
+  );
+}
+
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 
