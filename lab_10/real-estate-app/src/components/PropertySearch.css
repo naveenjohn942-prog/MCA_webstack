@@ -26,15 +26,49 @@
   }
   
   button.search-button {
-    background-color: #007bff;
+    /* background-color: #007bff; */
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
   
-  button.search-button:hover {
-    background-color: #0056b3;
-  }
+ 
   
+  /* PropertySearch.css */
+
+/* Add padding to the search button */
+button.search-button {
+  
+  /* color: #fff; */
+  padding: 10px; /* Adjust the padding as needed */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  /* transition: background-color 0.3s ease; Add a smooth transition effect */
+}
+
+
+
+/* Create a sliding effect for the search criteria container */
+.property-search-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  transition: transform 0.3s ease; /* Add a smooth transition effect for the transform property */
+}
+
+/* Slide the container to the right */
+.property-search-container.slide-right {
+  transform: translateX(100%); /* Adjust the value to control the slide distance */
+}
+.button{
+  background-color: transparent !important;
+  padding: 10px !important;
+}
