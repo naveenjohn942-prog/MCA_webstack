@@ -27,7 +27,7 @@ function PropertySearch({ onSearch }) {
             onChange={(e) => setSearchCriteria({ ...searchCriteria, location: e.target.value })}
           />
         </div>
-        <div className="col-md-6"> {/* Use col-md-6 to make it medium width */}
+        <div className="col-md-6"> 
           <label htmlFor="priceRange">Price Range:</label>
           <input
             type="text"
