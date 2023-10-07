@@ -1,4 +1,4 @@
-// App.js
+
 import React, { useState, useEffect, useMemo } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
@@ -11,11 +11,10 @@ function App() {
   const [reviews, setReviews] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
-  // Function to fetch books
   const fetchBooks = async () => {
     try {
       setIsLoading(true);
-      setSearchResults(booksData); // Set searchResults directly from booksData
+      setSearchResults(booksData); 
       setIsLoading(false);
     } catch (error) {
       console.error('Error fetching book data:', error);
@@ -23,20 +22,17 @@ function App() {
     }
   };
 
-  // Function to handle review submission
   const handleSubmitReview = (bookId, reviewText) => {
     const newReview = {
       text: reviewText,
     };
 
-    // Create or update the reviews for a specific book using its ID
     setReviews((prevReviews) => ({
       ...prevReviews,
       [bookId]: [...(prevReviews[bookId] || []), newReview],
     }));
   };
 
-  // Function to handle search query
   const handleSearch = (query) => {
     const filteredBooks = booksData.filter((book) =>
       book.title.toLowerCase().includes(query.toLowerCase())
@@ -44,12 +40,10 @@ function App() {
     setSearchResults(filteredBooks);
   };
 
-  // Use the useMemo hook to memoize the filtered books
   const memoizedSearchResults = useMemo(() => {
     return searchResults;
   }, [searchResults]);
 
-  // Fetch books when the component mounts
   useEffect(() => {
     fetchBooks();
   }, []);
